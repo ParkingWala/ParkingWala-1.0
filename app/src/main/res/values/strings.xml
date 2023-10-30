@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">ParkingWala-1.0</string>
     <string name="parkingwala">ParkingWala</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
 </resources>

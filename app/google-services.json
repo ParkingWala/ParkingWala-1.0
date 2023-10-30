@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "250433626938",
+    "project_id": "parkingwala10",
+    "storage_bucket": "parkingwala10.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:250433626938:android:e8fe44e6029aa291e92603",
+        "android_client_info": {
+          "package_name": "com.example.parkingwala_10"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBdCdiOLt5q2Enr864DO5CM1VYb4VeCd-0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
