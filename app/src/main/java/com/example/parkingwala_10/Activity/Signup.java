@@ -1,8 +1,10 @@
-package com.example.parkingwala_10;
+package com.example.parkingwala_10.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.parkingwala_10.R;
 
 public class Signup extends AppCompatActivity {
 
