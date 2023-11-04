@@ -43,7 +43,12 @@
             android:text="@string/login"
             android:layout_marginTop="30dp"/>
 
-
+        <Button
+            android:id="@+id/signup_button"
+            android:layout_width="200dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="30dp"
+            android:text="@string/signup" />
 
 
     </LinearLayout>
