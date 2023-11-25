@@ -21,6 +21,7 @@ import com.google.firebase.auth.FirebaseAuth;
 public class Login extends AppCompatActivity {
 
     private EditText LoginUsername,LoginPassword;
+    Button loginButton,signupButton;
     FirebaseAuth mAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,9 +29,18 @@ public class Login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         mAuth = FirebaseAuth.getInstance();
-        Button loginButton = findViewById(R.id.login_button);
+         loginButton = findViewById(R.id.login_button);
+        signupButton=findViewById(R.id.signup_button);
         LoginUsername = findViewById(R.id.login_username);
         LoginPassword = findViewById(R.id.login_password);
+
+        signupButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent =new Intent(Login.this,LoginPhoneNumberActivity.class);
+                startActivity(intent);
+            }
+        });
 
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,8 +60,7 @@ public class Login extends AppCompatActivity {
                             if (task.isSuccessful()) {
                                 String user_id=mAuth.getCurrentUser().getEmail();
                                 Toast.makeText(Login.this, "Id: " + user_id, Toast.LENGTH_SHORT).show();
-                                Intent intent =new Intent(Login.this,Signup.class);
-                                startActivity(intent);
+
                                 Log.d("TAG", "onComplete: " + mAuth.getCurrentUser().getEmail());
                             } else {
                                 Toast.makeText(Login.this, "error", Toast.LENGTH_SHORT).show();
