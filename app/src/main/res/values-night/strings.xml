@@ -2,4 +2,11 @@
 <resources>
     <string name="parkingwala">ParkingWala</string>
     <string name="password">Password</string>
+    <string name="enter_mobile_no">Enter Mobile No.</string>
+    <string name="get_otp">Get OTP</string>
+    <string name="don_t_have_account">Don\'t have account</string>
+    <string name="create_new_account">Create new account</string>
+    <string name="enter_otp">Enter OTP</string>
+    <string name="verify_otp">Verify OTP</string>
+    <string name="resend_otp_in_30_sec">Resend OTP in 30 sec</string>
 </resources>

@@ -5,92 +5,46 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center"
-    android:layout_margin="20dp"
     android:weightSum="100"
     tools:context=".Activity.LoginPhoneNumberActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_weight="20">
-        <RelativeLayout
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:layout_margin="10dp"
-            android:background="@drawable/circular_bg"
-            android:backgroundTint="@color/my_primary">
+        android:orientation="vertical">
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="15dp">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/app_logo"
+            />
+        </androidx.cardview.widget.CardView>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:textColor="@color/white"
-                android:textSize="18sp"
-                android:text="1"/>
-        </RelativeLayout>
-        <RelativeLayout
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:layout_margin="10dp"
-            android:background="@drawable/circular_bg"
-            android:backgroundTint="@color/light_gray">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:textColor="@color/white"
-                android:textSize="18sp"
-                android:text="2"/>
-        </RelativeLayout>
-        <RelativeLayout
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:layout_margin="10dp"
-            android:background="@drawable/circular_bg"
-            android:backgroundTint="@color/light_gray">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:textColor="@color/white"
-                android:textSize="18sp"
-                android:text="3"/>
-        </RelativeLayout>
     </LinearLayout>
-
-    <ImageView
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:src="@drawable/phone_icon"
-        app:tint="@color/my_primary"
-        android:layout_weight="20"
-        />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Enter mobile number"
-        android:layout_gravity="center_vertical"
-        android:letterSpacing="0.08"
-        android:textStyle="bold"
-        android:textSize="25sp"
-        android:layout_weight="5"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center"
-        android:layout_weight="5">
-
+        >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginVertical="10dp"
+                android:layout_marginHorizontal="20dp"
+                android:background="@drawable/card_corner_input"
+                android:gravity="center">
         <com.hbb20.CountryCodePicker
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:ccp_showFlag="false"
+            app:ccp_showFlag="true"
             app:ccp_showNameCode="false"
             android:id="@+id/login_countrycode"
          />
@@ -98,35 +52,91 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:hint="Mobile"
+            android:hint="@string/enter_mobile_no"
             android:inputType="phone"
-            android:layout_margin="10dp"
-            android:background="@drawable/edit_text_rounded_corner"
-            android:elevation="5dp"
+            android:paddingVertical="5dp"
+            android:fontFamily="@font/baloo2medium"
+            android:layout_marginVertical="10dp"
             android:id="@+id/login_mobile_number"
+            android:background="@null"
+            android:textCursorDrawable="@null"
+            android:maxLength="11"
+            android:textSize="18sp"
             />
+            </LinearLayout>
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="wrap_content"
         android:gravity="center_vertical"
         android:orientation="vertical"
-        android:layout_weight="20">
-        <Button
+        >
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/btn_rounded_corner"
-            android:text="Send otp"
+            android:text="@string/get_otp"
+            android:fontFamily="@font/baloo2semibold"
+            android:textColor="@color/white"
+            android:layout_marginVertical="10dp"
+            android:layout_marginHorizontal="20dp"
+            android:textAlignment="center"
+            android:textSize="23sp"
+            android:padding="5dp"
             android:id="@+id/send_otp_btn"/>
         <ProgressBar
             android:layout_width="32dp"
             android:layout_height="wrap_content"
-            android:indeterminateTint="@color/my_primary"
+            android:indeterminateTint="@color/my_primary_blue"
             android:layout_gravity="center"
+            android:visibility="gone"
             android:id="@+id/login_progress_bar"/>
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/login_image"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/don_t_have_account"
+                android:fontFamily="@font/baloo2semibold"
+                android:textSize="14sp"
+                android:layout_gravity="center"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/create_new_account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/create_new_account"
+                android:textAlignment="center"
+                android:fontFamily="@font/baloo2medium"
+                android:textColor="@color/white"
+                android:layout_marginTop="5dp"
+                android:paddingVertical="3dp"
+                android:paddingHorizontal="10dp"
+                android:background="@drawable/corner_radius"
+                android:textSize="14sp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
 
 </LinearLayout>

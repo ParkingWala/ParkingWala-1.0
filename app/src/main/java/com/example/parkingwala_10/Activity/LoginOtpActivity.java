@@ -6,11 +6,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.parkingwala_10.R;
 import com.example.parkingwala_10.Utils.AndroidUtil;
@@ -34,18 +38,25 @@ public class LoginOtpActivity extends AppCompatActivity {
     String verificationCode;
     PhoneAuthProvider.ForceResendingToken  resendingToken;
 
-    EditText otpInput;
-    Button nextBtn;
+    EditText otp1, otp2, otp3, otp4;
+    TextView nextBtn;
     ProgressBar progressBar;
     TextView resendOtpTextView;
+    String complete_otp = "", one = "", two = "", three = "", four = "";
     FirebaseAuth mAuth = FirebaseAuth.getInstance();
 
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_otp);
-        otpInput = findViewById(R.id.login_otp);
+//        otpInput = findViewById(R.id.login_otp);
+        otp1 = findViewById(R.id.otp_one);
+        otp2 = findViewById(R.id.otp_two);
+        otp3 = findViewById(R.id.otp_three);
+        otp4 = findViewById(R.id.otp_four);
+
         nextBtn = findViewById(R.id.login_next_btn);
         progressBar = findViewById(R.id.login_progress_bar);
         resendOtpTextView = findViewById(R.id.resend_otp_textview);
@@ -53,8 +64,90 @@ public class LoginOtpActivity extends AppCompatActivity {
 
         sendOtp(phoneNumber,false);
 
+        otp1.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                if (charSequence.length() == 1){
+                    one = charSequence.toString();
+                    otp2.requestFocus();
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
+        });
+
+        otp2.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                if (charSequence.length() == 1){
+                    two = charSequence.toString();
+                    otp3.requestFocus();
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
+        });
+
+        otp3.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                if (charSequence.length() == 1){
+                    three = charSequence.toString();
+                    otp4.requestFocus();
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
+        });
+
+        otp4.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                if (charSequence.length() == 1){
+                    four = charSequence.toString();
+
+                    complete_otp = one + two + three + four;
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
+        });
+
         nextBtn.setOnClickListener(v -> {
-            String enteredOtp  = otpInput.getText().toString();
+            String enteredOtp  = complete_otp;
+//            Toast.makeText(this, "Entered OTP is " + enteredOtp, Toast.LENGTH_LONG).show();
             PhoneAuthCredential credential =  PhoneAuthProvider.getCredential(verificationCode,enteredOtp);
             signIn(credential);
         });
