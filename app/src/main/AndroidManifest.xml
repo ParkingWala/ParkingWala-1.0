@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="CoarseFineLocation">
 
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
 
     <application
         android:name=".Clasess.App"
@@ -20,10 +22,10 @@
             android:exported="false" />
         <activity
             android:name=".Activity.RegisterParkingLocation"
-            android:exported="false"></activity>
+            android:exported="false" />
         <activity
             android:name=".Activity.HomeOwnerApp"
-            android:exported="false"></activity>
+            android:exported="false"/>
         <activity
             android:name=".Activity.LoginOtpActivity"
             android:exported="false" />
