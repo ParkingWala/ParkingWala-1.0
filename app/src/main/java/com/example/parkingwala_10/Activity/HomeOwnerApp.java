@@ -71,6 +71,7 @@ public class HomeOwnerApp extends AppCompatActivity {
             @SuppressLint("NotifyDataSetChanged")
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
+                list.clear();
                 for(DataSnapshot dataSnapshot:snapshot.getChildren()){
                     Parking p=dataSnapshot.getValue(Parking.class);
                     list.add(p);
