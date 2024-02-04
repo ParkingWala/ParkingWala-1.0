@@ -61,6 +61,22 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:hint="@string/parking_location_name"
+                android:inputType="text"
+                android:paddingVertical="5dp"
+                android:fontFamily="@font/baloo2medium"
+                android:layout_marginVertical="5dp"
+                android:id="@+id/parking_location_name"
+                android:background="@drawable/card_corner_input"
+                android:padding="10dp"
+                android:layout_marginHorizontal="20dp"
+                android:textCursorDrawable="@null"
+                android:textSize="18sp"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:hint="@string/charges_per_vehical_in_rs"
                 android:inputType="numberDecimal"
                 android:paddingVertical="5dp"
