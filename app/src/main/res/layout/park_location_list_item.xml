@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/listitem_corner">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/listview_image_corner"
+            android:src="@drawable/parking_location_item"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="5"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:layout_weight="4">
+
+                <TextView
+                    android:id="@+id/parking_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/parking_location_name"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/baloo2semibold"
+                    android:maxLines="1"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/parking_location_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/parking_location_address"
+                    android:textColor="@color/off_black"
+                    android:maxLines="2"
+                    android:fontFamily="@font/baloo2regular"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/parking_charges"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Rs. 00 / hr"
+                    android:textColor="@color/my_primary_blue"
+                    android:fontFamily="@font/baloo2medium"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:id="@+id/parking_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Time - 09:00 to 18:00"
+                    android:textColor="@color/my_primary_blue"
+                    android:fontFamily="@font/baloo2medium"
+                    android:textSize="14sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/distance_list_item"
+                    android:gravity="center"
+                    android:padding="2dp"
+                    android:fontFamily="@font/baloo2semibold"
+                    android:textSize="14sp"
+                    android:textColor="@color/my_primary_blue"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

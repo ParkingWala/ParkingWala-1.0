@@ -30,7 +30,7 @@ FirebaseAuth auth;
     private void onClick() {
         textView.setOnClickListener(view -> {
             Toast.makeText(MainActivity.this, R.string.parkingwala, Toast.LENGTH_LONG).show();
-            Intent intent =new Intent(this, Login.class);
+            Intent intent =new Intent(this, HomeOwnerApp.class);
             startActivity(intent);
         });
     }

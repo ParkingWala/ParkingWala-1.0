@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.RegisterParkingLocation">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/toolbar_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:fontFamily="@font/baloo2medium"
+        android:text="@string/register_your_parking_place"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include" />
+
+    <TextView
+        android:id="@+id/share_current_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="10dp"
+        android:background="@drawable/button_transferent"
+        android:fontFamily="@font/baloo2semibold"
+        android:padding="5dp"
+        android:text="@string/share_your_current_location"
+        android:textAlignment="center"
+        android:textColor="@color/my_primary_blue"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/share_current_location">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            >
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/parking_location_name"
+                android:inputType="text"
+                android:paddingVertical="5dp"
+                android:fontFamily="@font/baloo2medium"
+                android:layout_marginVertical="5dp"
+                android:id="@+id/parking_location_name"
+                android:background="@drawable/card_corner_input"
+                android:padding="10dp"
+                android:layout_marginHorizontal="20dp"
+                android:textCursorDrawable="@null"
+                android:textSize="18sp"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/charges_per_vehical_in_rs"
+                android:inputType="numberDecimal"
+                android:paddingVertical="5dp"
+                android:fontFamily="@font/baloo2medium"
+                android:layout_marginVertical="5dp"
+                android:id="@+id/parking_amount"
+                android:background="@drawable/card_corner_input"
+                android:padding="10dp"
+                android:layout_marginHorizontal="20dp"
+                android:textCursorDrawable="@null"
+                android:textSize="18sp"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/capacity_no_of_vehicles"
+                android:paddingVertical="5dp"
+                android:inputType="number"
+                android:fontFamily="@font/baloo2medium"
+                android:layout_marginVertical="5dp"
+                android:id="@+id/parking_capacity"
+                android:background="@drawable/card_corner_input"
+                android:padding="10dp"
+                android:layout_marginHorizontal="20dp"
+                android:textCursorDrawable="@null"
+                android:textSize="18sp"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/your_contact_no_for_user"
+                android:paddingVertical="5dp"
+                android:inputType="phone"
+                android:fontFamily="@font/baloo2medium"
+                android:layout_marginVertical="5dp"
+                android:id="@+id/parking_contactNo"
+                android:background="@drawable/card_corner_input"
+                android:padding="10dp"
+                android:layout_marginHorizontal="20dp"
+                android:textCursorDrawable="@null"
+                android:textSize="18sp"
+                />
+
+            <LinearLayout
+                android:id="@+id/time_picker_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/card_corner_input"
+                android:paddingVertical="5dp"
+                android:fontFamily="@font/baloo2medium"
+                android:layout_marginVertical="5dp"
+                android:padding="10dp"
+                android:layout_marginHorizontal="20dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="from"
+                        android:textColor="@color/off_black"
+                        android:textSize="18sp"
+                        android:gravity="center_horizontal"
+                        android:fontFamily="@font/baloo2medium"/>
+                    <TimePicker
+                        android:id="@+id/from_time_picker"
+                        android:layout_width="wrap_content"
+                        android:layout_height="100dp"
+                        android:timePickerMode="spinner" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="to"
+                        android:textColor="@color/off_black"
+                        android:textSize="18sp"
+                        android:gravity="center_horizontal"
+                        android:fontFamily="@font/baloo2medium"/>
+                    <TimePicker
+                        android:id="@+id/to_time_picker"
+                        android:layout_width="wrap_content"
+                        android:layout_height="100dp"
+                        android:timePickerMode="spinner" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/complete_address_of_parking_place"
+                android:paddingVertical="5dp"
+                android:inputType="textMultiLine"
+                android:minLines="3"
+                android:fontFamily="@font/baloo2medium"
+                android:layout_marginVertical="5dp"
+                android:id="@+id/parking_address"
+                android:background="@drawable/card_corner_input"
+                android:padding="10dp"
+                android:layout_marginHorizontal="20dp"
+                android:textCursorDrawable="@null"
+                android:textSize="18sp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:layout_marginHorizontal="20dp">
+
+                <CheckBox
+                    android:id="@+id/checkBox_TandC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center">
+                <TextView
+                    android:id="@+id/termsandcondition"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/terms_amp_conditions_for_parking_owner"
+                    android:fontFamily="@font/baloo2medium"
+                    android:textColor="@color/link_blue"
+                    android:textSize="16sp"
+                    />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/submit_parking_location_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/btn_rounded_corner"
+                android:fontFamily="@font/baloo2semibold"
+                android:padding="5dp"
+                android:text="@string/submit"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="23sp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

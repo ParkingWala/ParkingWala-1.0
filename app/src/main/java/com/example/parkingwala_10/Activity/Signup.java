@@ -2,7 +2,9 @@ package com.example.parkingwala_10.Activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -10,6 +12,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.parkingwala_10.R;
@@ -21,7 +25,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class Signup extends AppCompatActivity {
 
-    private Button loginbtn, signupbtn;
+    private TextView signupbtn, loginbtn;
     private EditText reg_firstname,reg_lastname,reg_phonenumber,reg_username,reg_password;
 
     FirebaseAuth mAuth;

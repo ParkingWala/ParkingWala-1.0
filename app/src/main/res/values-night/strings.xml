@@ -2,4 +2,31 @@
 <resources>
     <string name="parkingwala">ParkingWala</string>
     <string name="password">Password</string>
+    <string name="enter_mobile_no">Enter Mobile No.</string>
+    <string name="get_otp">Get OTP</string>
+    <string name="don_t_have_account">Don\'t have account</string>
+    <string name="create_new_account">Create new account</string>
+    <string name="enter_otp">Enter OTP</string>
+    <string name="verify_otp">Verify OTP</string>
+    <string name="resend_otp_in_30_sec">Resend OTP in 30 sec</string>
+    <string name="enter_first_name">Enter first name</string>
+    <string name="last_name">Enter last Name</string>
+    <string name="enter_phone_number">Enter phone Number</string>
+    <string name="enter_email_id">Enter email id</string>
+    <string name="welcome">Welcome</string>
+    <string name="tag_line">Nevigate, Park, Enjoy</string>
+    <string name="my_parking_location">My Parking Location</string>
+    <string name="parking_location_name">Parking location name</string>
+    <string name="parking_location_address">Parking location address</string>
+    <string name="add_parking_location">Add parking location</string>
+    <string name="register_your_parking_place">Register your parking place</string>
+    <string name="charges_per_vehical_in_rs">Charges per vehical (in Rs.)</string>
+    <string name="capacity_no_of_vehicles">Capacity (No. of vehicles)</string>
+    <string name="your_contact_no_for_user">Your contact no. for user</string>
+    <string name="complete_address_of_parking_place">Complete address of parking place</string>
+    <string name="terms_amp_conditions_for_parking_owner"><![CDATA[Terms & conditions for parking owner]]></string>
+    <string name="share_your_current_location">Click to share your current location</string>
+    <string name="submit">Submit</string>
+    <string name="terms_and_conditions">Terms and Conditions</string>
+
 </resources>
